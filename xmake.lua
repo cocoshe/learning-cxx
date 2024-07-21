@@ -2,6 +2,8 @@ add_rules("mode.debug", "mode.release")
 set_encodings("utf-8")
 set_warnings("all")
 set_languages("cxx17")
+add_ldflags("-pthread")
+
 
 target("test")
     set_kind("static")
