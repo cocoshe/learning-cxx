@@ -53,14 +53,6 @@ public:
         return cache[i];
     }
 
-    size_t operator[](int i) const {
-        if (cached >= i + 1) return cache[i];
-        if (i <= cached) {
-            return cache[i];
-        }
-        ASSERT(false, "i out of range");
-    }
-
     // NOTICE: 不要修改这个方法
     size_t operator[](int i) const {
         ASSERT(i <= cached, "i out of range");
